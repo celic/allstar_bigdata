@@ -1,0 +1,82 @@
+1 	Rank			-- excluded
+2 	Player Name		-- included in .xls, not in .txt
+3 	Team			-- excluded
+4 	GP				-- Games Played
+5 	TOI				-- Time on Ice
+6 	G 				-- Goals
+7 	A 				-- Assists
+8 	FirstA 			-- Primary Assists
+9 	Points 			-- Points = Goals + Assists, excluded
+10 	Shots 			-- Shots taken
+11 	iFenwick 		-- Shots on Goal + Shots directed at net that missed net
+12 	iCorsi 			-- iFenwick + Shots directed at net that were blocked
+13 	ShPct 			-- Shooting percentage, excluded
+14 	G/60 			-- Goals per 60 minutes played, excluded
+15 	A/60 			-- Assists per 60 minutes played, excluded
+16 	FirstA/60 		-- Primary Assists per 60 minutes played, excluded
+17 	Points/60 		-- Points per 60 minutes played, excluded
+18 	Shots/60 		-- Shots taken per 60 minutes played, excluded
+19 	iFenwick/60 	-- Fenwick per 60 minutes played, excluded
+20 	iCorsi/60		-- Corsi per 60 minutes played, excluded
+21 	IGP				-- The % of goals scored while player was on ice that the player scored
+22 	IAP				-- The % of goals scored while player was on ice that the player has an assist on
+23 	IPP				-- The % of goals scored while player was on ice that the player had a point on, excluded
+24 	Rank 			-- excluded
+25 	Player Name		-- excluded
+26 	Team Name 		-- excluded
+27 	GP 				-- Games Played, excluded
+28 	TOI 			-- Time on Ice, excluded
+29 	GF60 			-- Goals For per 60 Minutes Played
+30 	GA60 			-- Goals Against per 60 Minutes Played
+31 	GF% 			-- Goals For Percentage, excluded based on #6 and #7
+32 	Sh% 			-- Shooting Percentage while on ice, higher implies good offensive player
+33 	Sv% 			-- Save Percentage while on ice, higher implies good defensive player even if not a goalie
+34 	PDO 			-- Sh% + Sv%, excluded based on #9 and #10
+35 	TMGF60			-- The average GF60 of the players line mates when those line mates are not playing with him
+36 	TMGA60			-- The average GA60 of the players line mates when those line mates are not playing with him
+37 	TMGF% 			-- The average GF% of the players line mates when those line mates are not playing with him, excluded based on #12 and #13
+38 	GF60 RelTM 		-- GF60 Relative to league average, excluded
+39 	GA60 RelTM 		-- GA60 Relative to league average, excluded
+40 	GF% RelTM 		-- GF% Relative to league average, excluded
+41 	OppGF60 		-- Opponent's GF60
+42 	OppGA60 		-- Opponent's GA60
+43 	OppGF% 			-- Opponent's GF%, excluded
+44 	OffFO 			-- Offensive Faceoff Wins, excluded
+45 	DefFO 			-- Defensive Faceoff Wins, excluded
+46 	NeuFO 			-- Neutral zone Faceoff Wins, excluded
+47 	TotFO 			-- Total Faceoff Wins, excluded
+48 	OffFO% 			-- Offensive Faceoff Win %
+49 	DefFO% 			-- Defensive Faceoff Win %
+50 	NeuFO%			-- Neutral zone Faceoff Win %
+
+--------------------------------------------------------
+
+Goalies
+
+1 	Rank			-- excluded	
+2 	Player Name		-- included in .xls, not in .txt
+3 	Team			-- excluded
+4 	GP				-- Games played
+5 	TOI				-- Time on ice
+6 	GF60			-- Goals For per 60
+7 	GA60			-- Goals Against per 60
+8 	GF%				-- excluded
+9 	Sh%				-- Team shooting percentage, excluded
+10	Sv%				-- Team save percentage
+11	PDO				-- Sh% + Sv% while player is on the ice = Sh% + (1-OppSh%), excluded
+12	TMGF60			-- excluded
+13	TMGA60			-- excluded
+14	TMGF%			-- excluded
+15 	GF60 RelTM		-- excluded
+16 	GA60 RelTM		-- excluded
+17	GF% RelTM		-- excluded
+18	OppGF60			-- Opposing goals per 60
+19	OppGA60			-- Opposing goals against per 60
+20	OppGF%			-- excluded
+21	OZFO			-- excluded
+22	DZFO			-- excluded
+23	NZFO			-- excluded
+24	TotFO			-- excluded
+25	OZFO%			-- excluded
+26	DZFO%			-- excluded
+27	NZFO%			-- excluded
