@@ -67,6 +67,6 @@ seasons.each do |season|
 
 		# Open CSV
 
-		# Find and replace -1 with 1 for allstars
+		# Find and replace -1 with 1 for allstarsg
 	end
 end
