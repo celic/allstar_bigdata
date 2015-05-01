@@ -24,7 +24,7 @@ def parse_file(doc1, doc2, csv)
 			content = cell.content.strip
 
 			if index == 1
-				content = content.split(', ').join('_')
+				content = content.split(', ').join('_').sub('.', '')
 			end
 			csv.write(content + ",\t") unless exclusions.include?(index+1)
 		end
@@ -59,28 +59,20 @@ def goalie_parse_file(doc, csv)
 	end
 end
 
-def parse_txt(txt, csv)
-
-end
-
 seasons.each do |season|
 	positions.each do |position|
 
 		doc1 = Nokogiri::HTML(open("http://stats.hockeyanalysis.com/ratings.php?disp=1&db=#{season}&sit=all&pos=#{position}&type=individual&teamid=0&minutes=60&sort=name&sortdir=ASC"))
 		doc2 = Nokogiri::HTML(open("http://stats.hockeyanalysis.com/ratings.php?disp=1&db=#{season}&sit=all&pos=#{position}&type=goals&teamid=0&minutes=60&sort=name&sortdir=ASC"))
 		csv = File.new("files/#{season}_#{position}.csv", "w")
-		txt = File.new("files/#{season}_#{position}_dat.txt", "w")
 		
 		parse_file(doc1, doc2, csv)
-		parse_txt(csv, txt)
 	end
 
 	# Goalies need too much customization
 	doc = Nokogiri::HTML(open("http://stats.hockeyanalysis.com/ratings.php?disp=1&db=#{season}&sit=all&type=goals&teamid=0&pos=goalies&minutes=180&disp=1&sort=name&sortdir=ASC"))
 	csv = File.new("files/#{season}_goalies.csv", "w")
-	txt = File.new("files/#{season}_goalies_dat.txt", "w")
 
 	goalie_parse_file(doc, csv)
-	parse_txt(csv, txt)
 end
 
