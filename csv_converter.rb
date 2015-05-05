@@ -7,5 +7,7 @@ seasons.each do |season|
 
 	positions.each do |position|
 
+		param_x = []
+		param_y = []
 	end
 end
