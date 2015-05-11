@@ -27,7 +27,7 @@ positions.each do |position|
 	txt = File.new("files/#{position}_DAT.txt", "w")
 
 	txt.write("#PARAMETERS\n")
-	txt.write("param p:= #{param_x[0].split.count};\n")
+	txt.write("param p:= #{param_x[0].split.count - 1};\n")
 	txt.write("param n:= #{param_y.count};\n")
 	txt.write("param c:= .1;\n")
 
