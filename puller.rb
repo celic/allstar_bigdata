@@ -26,6 +26,9 @@ def parse_file(doc1, doc2, csv)
 			if index == 1
 				content = content.split(', ').join('_').sub('.', '')
 			end
+			
+			content = content.split(':')[0]
+			
 			csv.write(content + ",\t") unless exclusions.include?(index+1)
 		end
 		csv.write('-1;')
