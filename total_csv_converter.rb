@@ -7,20 +7,17 @@ positions.each do |position|
 	param_x = []
 	param_y = []
 
-	seasons.each do |season|
+	# Open CSV and modify content
+	IO.readlines("files/total_#{position}.csv").each do |line|
 
-		# Open CSV and modify content
-		IO.readlines("files/total_#{position}.csv").each do |line|
+		content = line.split(',')
 
-			content = line.split(',')
+		content[0] = param_x.count + 1
+		x_content = content[0..-2].join
+		y_content = content[-1].chomp[0..-2]
 
-			content[0] = param_x.count + 1
-			x_content = content[0..-2].join
-			y_content = content[-1].chomp[0..-2]
-
-			param_x << x_content
-			param_y << [param_y.count + 1, y_content].join
-		end
+		param_x << x_content
+		param_y << [param_y.count + 1, y_content].join
 	end
 
 	txt = File.new("files/total_#{position}_DAT.txt", "w")
